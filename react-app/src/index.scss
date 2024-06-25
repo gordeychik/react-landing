@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,p {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@mixin normal-text {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0.44999998807907104px;
+  text-align: left;
+  color: #fff;
+}
+
+@mixin purple {
+  background-color: #7711dd;
+}
+
+@mixin titles {
+  font-family: Permanent Marker;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 48.5px;
+  letter-spacing: 2px;
+}
+
+.swiper-pagination {
+  margin-top: 50px;
+  position: relative;
+}
+
+
+@media (max-width: 580px) {
+  h2 {
+    font-size: 34px !important;
+    line-height: 46px !important;
+  }
+}

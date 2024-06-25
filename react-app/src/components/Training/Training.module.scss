@@ -1,0 +1,113 @@
+@import '../../index.scss';
+
+.training {
+    width: 100%;
+    padding: 50px 0 30px;
+    @include purple;
+}
+
+.training__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.training__info {
+    max-width: 484px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        @include titles;
+        color: #fff;
+        margin: 0;
+    }
+
+    p {
+        @include normal-text;
+        margin: 0;
+        margin-top: 25px;
+    }
+
+    form label {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+    }
+
+    .access, .error {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        @include normal-text;
+        font-weight: 600;
+        color: #28fb75;
+        transition: all 0.4s;
+    }
+
+    .error {
+        color: rgb(255, 43, 43);
+    }
+}
+
+.training__image {
+    width: 574px;
+    height: 627px;
+}
+
+.training__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1400px) {
+    .training__wrapper {
+        justify-content: center;
+    }
+
+    .training__image svg {
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 1200px) {
+    .training__wrapper {
+        justify-content: center;
+    }
+
+    .training__image {
+        width: 500px;
+    }
+}
+
+@media (max-width: 992px) {
+    .training__wrapper {
+        padding-top: 30px;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .training__image svg {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .training__wrapper {
+        align-items: center;
+        padding: 30px 0;
+    }
+
+    .training__image {
+        display: none;
+    }
+}
+
+@media (max-width: 580px) {
+    .training {
+        padding: 0;
+    }
+}
